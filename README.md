@@ -1,6 +1,5 @@
 # Solution to the Junior_Platform_Engineer_Challenge
 
-## Initial Step
 Hi, thank you for considering me for the next step and providing me with this exciting challenge "Junior_Platform_Engineer_Challenge.pdf"
 The file contains instructions, random strings, and questions. Here's my attempt!
 
