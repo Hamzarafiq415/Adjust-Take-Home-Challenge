@@ -18,47 +18,51 @@ pdftotext -layout Junior_Platform_Engineer_Challenge.pdf - | awk '/Unset/{p=1; n
 ## Output:
 Now, I have created file.txt with all the random strings given in pdf document.
 
-###############
-### TASK!!! ###
-###############
+
+# TASK!!
+
 
 ## Question 1: How many lines in this file?
 
-Command: wc -l file.txt 
-Output: 98
+**Command:** wc -l file.txt
 
-Explanation: It's a simple command which counts number of lines in a file. To make sure it doesnt count empty lines, I already removed empty lines while creating the file.txt.
+**Output:** 98
+
+**Explanation:** It's a simple command which counts number of lines in a file. To make sure it doesnt count empty lines, I already removed empty lines while creating the file.txt.
 
 ## Question 2: How many “Z” Characters in this file?
 
-Command: grep -o 'Z' file.txt | wc -l
-Output: 44
+**Command:** grep -o 'Z' file.txt | wc -l
 
-Explanation: To count all occurrences of the character "Z" in the file, including multiple occurrences on the same line, we can use grep with the -o option to output each match on a separate line. After that, we can count the total number of matches using wc -l.
+**Output:** 44
+
+**Explanation:** To count all occurrences of the character "Z" in the file, including multiple occurrences on the same line, we can use grep with the -o option to output each match on a separate line. After that, we can count the total number of matches using wc -l.
 
 ## Question 3: Find on which line is “Junior”, “Platform” and “Engineer”, not case sensitive.
 
-Command: grep -niE 'Junior|Platform|Engineer' file.txt
-Output:
+**Command:** grep -niE 'Junior|Platform|Engineer' file.txt
+
+**Output:**
 28:      COJILxEOhBRPlatFormjc00OhTT6ve
 65:      x7t2vMJunior0qcMHQtnVGhlggfnry
 88:      7B6nmS3lLJaEngineeR28pzseTejdm
 
-Explanation: I used "-ni" to perform a case-insensitive search and print the line numbers of matching lines, "E" to interpret the pattern as an extended regular expression, and pattern we are searching for, which matches any of the words "Junior", "Platform", or "Engineer".
+**Explanation:** I used "-ni" to perform a case-insensitive search and print the line numbers of matching lines, "E" to interpret the pattern as an extended regular expression, and pattern we are searching for, which matches any of the words "Junior", "Platform", or "Engineer".
 
 ## Question 4: Change “Junior” to “Senior”.
 
-Command: sed -i 's/Junior/Senior/g' file.txt
+**Command:** sed -i 's/Junior/Senior/g' file.txt
 
-Command to verfiy: grep -niE 'Senior|Platform|Engineer' file.txt 
-Output: 
+**Command to verfiy:** grep -niE 'Senior|Platform|Engineer' file.txt 
+
+**Output:** 
 28:      COJILxEOhBRPlatFormjc00OhTT6ve
 65:      x7t2vMSenior0qcMHQtnVGhlggfnry
 88:      7B6nmS3lLJaEngineeR28pzseTejdm
 
-Explanation: 'sed' is a stream editor for filtering and transforming text, 'i' for editing the file in place, 's/Junior/Senior/g' is a command in sed: 's: Indicates substitution', 'Junior: The pattern to search for', 'Senior: The replacement text', and 'g: Replace all occurrences on each line'.
+**Explanation:** 'sed' is a stream editor for filtering and transforming text, 'i' for editing the file in place, 's/Junior/Senior/g' is a command in sed: 's: Indicates substitution', 'Junior: The pattern to search for', 'Senior: The replacement text', and 'g: Replace all occurrences on each line'.
 
-**If you have any questions, please ask me**
+**If you have any questions, please ask me.**
 
  
 
